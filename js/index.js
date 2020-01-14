@@ -68,6 +68,12 @@ window.onload = (eventSender) =>
 
 window.onresize = (eventSender) =>
     {
+        eventSender.stopPropagation();
+        alert("Wow");
+    };;
+
+window.onresize = (eventSender) =>
+    {
         alert("Our webpage is recommended to stay within a 300-800px range!");
     };;
 
