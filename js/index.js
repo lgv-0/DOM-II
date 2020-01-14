@@ -58,3 +58,20 @@ registerEventToList(f_Find("nav a"), "wheel", function _onWheel (eventSender)
 
 f_Find("h2")[0].setAttribute("draggable", "true");
 f_Find("h2")[0].setAttribute("ondragstart", "event.target.innerText = event.target.innerText.substring(0, event.target.innerText.length - 1);");
+
+window.onload = (eventSender) =>
+    {
+        f_Find(".footer p")[0].style.backgroundColor = "orange";
+    };;
+
+window.onresize = (eventSender) =>
+    {
+        alert("Our webpage is recommended to stay within a 300-800px range!");
+    };;
+
+registerEventToList(f_Find(".logo-heading"), "dblclick", function _dblClick (eventSender) {location.reload();});
+
+registerEventToList(f_Find(".destination h4"), "click", function _select (eventSender)
+    {
+        InjectCSSDirect(eventSender, "color:red,backgroundColor:black");
+    });
