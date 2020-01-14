@@ -45,7 +45,7 @@ registerEventToList(f_Find("p"), "mouseleave", function _mouseLeave (eventSender
 registerEventToList(f_Find("html"), "keydown", function _keyDown (eventSender) {InjectCSSDirect(eventSender, "opacity:0")});
 registerEventToList(f_Find("html"), "keyup", function _keyUp (eventSender) {InjectCSSDirect(eventSender, "opacity:100")});
 
-registerEventToList(f_Find("nav"), "wheel", function _onWheel (eventSender)
+registerEventToList(f_Find("nav a"), "wheel", function _onWheel (eventSender)
     {
         eventSender.preventDefault();
 
