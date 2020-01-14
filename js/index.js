@@ -56,4 +56,5 @@ registerEventToList(f_Find("nav"), "wheel", function _onWheel (eventSender)
             InjectCSSDirect(eventSender, `fontSize:${eventSender.deltaY < 0 ? parseFloat(size.replace("px", "")) + 0.5 : parseFloat(size.replace("px", "")) - 0.5}px`);
     });
 
-registerEventToList(f_Find("img"), "ondrag", function _onDrag (eventSender) {console.log("hi")});
+f_Find("h2")[0].setAttribute("draggable", "true");
+f_Find("h2")[0].setAttribute("ondragstart", "event.target.innerText = event.target.innerText.substring(0, event.target.innerText.length - 1);");
