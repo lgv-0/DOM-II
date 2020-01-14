@@ -25,9 +25,11 @@ function InjectCSSDirect(e_Target, s_CSSstring)
             Build[temp[0]] = temp[1];
         });
 
-    if (Array.isArray(e_Target))
+    let testArray = Array.from(e_Target);
+    
+    if (testArray.length > 0)
     {
-        e_TargetList.forEach((e_Cur) =>
+        testArray.forEach((e_Cur) =>
             {
                 Object.assign(e_Cur.style, Build);
             });
